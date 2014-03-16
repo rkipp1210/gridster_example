@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+      
+    <head>
+        
+        <title>First Git Project &raquo; Fun with Gridster</title>
+        
+        <link rel="stylesheet" type="text/css" href="css/jquery.gridster.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    
+    </head>
+
+    <body>
+
+        <h1>Gridster Example</h1>
+        <p>This is my first git project.  Playing around with grister.js.</p>
+
+        <div class="gridster">
+            
+            <ul>
+            
+                <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+                    1, 1
+                </li>
+                <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+                    2, 1
+                </li>
+                 
+                <li data-row="1" data-col="2" data-sizex="2" data-sizey="1">
+                    1, 2
+                </li>
+                <li data-row="2" data-col="2" data-sizex="2" data-sizey="2">
+                    2, 2
+                </li>
+            
+            </ul>
+
+        </div>
+
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script src="js/jquery.gridster.js" type="text/javascript" charset="utf-8"></script>
+
+        <script type="text/javascript" id="code">
+        var gridster;
+
+        $(function(){ //DOM Ready
+ 
+            $(".gridster ul").gridster({
+            widget_margins: [10, 10],
+            widget_base_dimensions: [140, 140]
+            });
+         
+        });
+
+        </script>
+
+    </body>
+
+</html>

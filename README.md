@@ -1,4 +1,4 @@
-gridster_example
+Gridster Example
 ================
 
-Playing around with gridster.js
+Playing around with git and gridster.js

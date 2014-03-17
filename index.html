@@ -2,53 +2,99 @@
 <html>
       
     <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>First Git Project &raquo; Fun with Gridster and Bootstrap</title>
         
-        <title>First Git Project &raquo; Fun with Gridster</title>
-        
-        <link rel="stylesheet" type="text/css" href="css/jquery.gridster.css">
+        <!-- CSS Includes -->
+        <!-- Main -->
         <link rel="stylesheet" type="text/css" href="css/main.css">
+        <!-- Gridster -->
+        <link rel="stylesheet" type="text/css" href="css/jquery.gridster.css">
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap theme -->
+        <link href="/dist/css/bootstrap-theme.min.css" rel="stylesheet">
     
     </head>
 
-    <body>
+    <body role="document">
+        
+        <div class="container theme-showcase" role="main">
+            <!-- Bootstrap -->
+            <script src="js/bootstrap.min.js"></script>
+            <!-- jQuery -->
+            <script type="text/javascript" src="js/jquery.js"></script>
+            <!-- Gridster -->
+            <script src="js/jquery.gridster.js" type="text/javascript" charset="utf-8"></script>
+                
+            <div class="page-header">
+                <h1>Gridster and Bootstrap</h1>
+            </div>
+            <p>This is my first git and html project.  Playing around with grister.js and twitter bootstrap.</p>
 
-        <h1>Gridster Example</h1>
-        <p>This is my first git project.  Playing around with grister.js.</p>
+            <p>
+                <div class="gridster">
+                    <ul>
+                        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+                            <header>|||</header>
+                            1, 1
+                        </li>
+                        <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+                            <header>|||</header>
+                            2, 1
+                        </li>
+                         
+                        <li data-row="1" data-col="2" data-sizex="2" data-sizey="1">
+                            <header>|||</header>
+                            1, 2
+                        </li>
+                        <li data-row="2" data-col="2" data-sizex="2" data-sizey="2">
+                            <header>|||</header>
+                            2, 2
+                        </li>
+                    </ul>
+                </div>
+            </p>
 
-        <div class="gridster">
-            
-            <ul>
-            
-                <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-                    1, 1
-                </li>
-                <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
-                    2, 1
-                </li>
-                 
-                <li data-row="1" data-col="2" data-sizex="2" data-sizey="1">
-                    1, 2
-                </li>
-                <li data-row="2" data-col="2" data-sizex="2" data-sizey="2">
-                    2, 2
-                </li>
-            
-            </ul>
+            <p>
+                <button type="button" class="btn btn-primary">Save Layout</button>
+                <button type="button" class="btn btn-primary">Load Layout</button>
+            </p>
 
         </div>
 
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script src="js/jquery.gridster.js" type="text/javascript" charset="utf-8"></script>
+        <style type="text/css">
+            .gridster li header {
+                background: #999;
+                display: block;
+                font-size: 15px;
+                line-height: normal;
+                padding: 4px 0 6px ;
+                margin-bottom: 15px;
+                cursor: move;
+                text-align: left;
+            }
+        </style>
 
         <script type="text/javascript" id="code">
         var gridster;
 
         $(function(){ //DOM Ready
  
-            $(".gridster ul").gridster({
-            widget_margins: [10, 10],
-            widget_base_dimensions: [140, 140]
-            });
+            gridster = $(".gridster ul").gridster({
+                widget_base_dimensions: [150, 150],
+                widget_margins: [5, 5],
+                //helper: 'clone',
+                resize: {
+                    enabled: true
+                }
+                // draggable: {
+                //     handle: 'header'
+                // }
+
+            }).data('gridster');
          
         });
 

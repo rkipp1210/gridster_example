@@ -34,9 +34,8 @@ body {
     font-size: 1em;
     font-weight: bold;
     text-align: center;
-    line-height: 100%;
+    line-height: 50%;
 }
-
 
 .gridster {
     margin: 0 auto;
